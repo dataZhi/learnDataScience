@@ -2,19 +2,22 @@
 #### 自己实现的sklearn库底层代码，持续更新中
 
 - preprocessing
-  - MinMaxScale_
-  - StandardScale_
+  - MinMaxScaler_
+  - StandardScaler_
   - OneHotEncoder_
   - LabelEncoder_
   - OrdinalEncoder_
+  - PolynomialFeatures_
 
 - naive_bayes
-  - MultinormialBayes_
-  - GaussianBayes_
+  - MultinomialNB_
+  - GaussianNB_
 
 - linear_model
   - LinearRegression_
-  - LogisticRegressor_
+  - Ridge_
+  - Lasso_
+  - LogisticRegression_
   
 - neighbors
   - KNeighborsClassifier_
@@ -38,11 +41,11 @@
 - metrics
   - accuracy_score_
   - f1_score_
-  - precicous_score_
+  - precision_score_
   - recall_score_
   - confusion_matrix_
   - mean_squared_score_
   - mean_absolute_score_
   - r2_score_
   - silhouette_score_
-  - adjust_rand_index_
+  - adjusted_rand_score_
