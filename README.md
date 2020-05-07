@@ -2,6 +2,7 @@
 #### 自己实现的sklearn库底层代码，持续更新中
 
 - preprocessing
+  - MinMaxScale_
   - StandardScale_
   - OneHotEncoder_
   - LabelEncoder_
