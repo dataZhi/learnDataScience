@@ -1,5 +1,6 @@
 # mySKlearn
 #### 自己实现的sklearn库底层代码，持续更新中
+
 - preprocessing
   - StandardScale_
   - OneHotEncoder_
@@ -26,7 +27,7 @@
   - KMeans_
   
 - decomposition
-  _ PCA_
+  - PCA_
   
 - model_selection
   - train_test_split_
