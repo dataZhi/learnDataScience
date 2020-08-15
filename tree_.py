@@ -142,7 +142,7 @@ class DecisionTreeRegressor_:
                 if self.min_samples_leaf is not None and \
                         (len(y1) < self.min_samples_leaf or len(y0) < self.min_samples_leaf):
                     continue
-                cur_err = len(y1) / len(y) * self.square_error(y1) + len(y0) / len(y) * self.square_error(y0)
+                cur_err =self.square_error(y1) + self.square_error(y0)
                 if cur_err < best_err:
                     best_fea_idx, best_err, best_threshold = fea_idx, cur_err, threshold
         if self.min_impurity_decrease and (total_err - best_err) < self.min_impurity_decrease:  # 小于最小切割基尼增益
