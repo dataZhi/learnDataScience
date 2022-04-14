@@ -47,7 +47,7 @@ class DecisionTreeClassifier_:
         best_fea_idx, best_gini, best_feature = -1, float('inf'), None
         if len(np.unique(y)) == 1:  # 样本纯净
             return best_fea_idx, best_feature
-        if self.min_samples_split and len(y) < self.min_samples_split:  ## 小于最小切割样本数
+        if self.min_samples_split and len(y) < self.min_samples_split:  # 小于最小切割样本数
             return best_fea_idx, best_feature
         for fea_idx in range(X.shape[1]):
             for feature in np.unique(X[:, fea_idx]):
@@ -109,7 +109,6 @@ class DecisionTreeRegressor_:
     """
     基于CART的回归树
     """
-
     def __init__(self, max_depth=None, min_samples_split=2, min_samples_leaf=1, min_impurity_decrease=0.0):
         self.max_depth = max_depth
         self.min_samples_split = min_samples_split
@@ -126,7 +125,7 @@ class DecisionTreeRegressor_:
         # 对连续取值的特征求解最佳切割阈值和最小基尼
         if len(np.unique(y)) < 2:  # 样本纯净
             return -1, None
-        if self.min_samples_split and len(y) < self.min_samples_split:  ## 小于最小切割样本数
+        if self.min_samples_split and len(y) < self.min_samples_split:  # 小于最小切割样本数
             return -1, None
         total_err = self.square_error(y)
         best_fea_idx, best_err, best_threshold = -1, float('inf'), None
@@ -142,7 +141,7 @@ class DecisionTreeRegressor_:
                 if self.min_samples_leaf is not None and \
                         (len(y1) < self.min_samples_leaf or len(y0) < self.min_samples_leaf):
                     continue
-                cur_err =self.square_error(y1) + self.square_error(y0)
+                cur_err = len(y1) / len(y) * self.square_error(y1) + len(y0) / len(y) * self.square_error(y0)
                 if cur_err < best_err:
                     best_fea_idx, best_err, best_threshold = fea_idx, cur_err, threshold
         if self.min_impurity_decrease and (total_err - best_err) < self.min_impurity_decrease:  # 小于最小切割基尼增益
