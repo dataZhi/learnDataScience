@@ -1,5 +1,5 @@
 # learnSKlearn
-#### 自己实现的sklearn库底层代码，持续更新中
+#### 从0实现sklearn主要模型底层算法，持续更新中……
 
 - preprocessing
   - MinMaxScaler_
