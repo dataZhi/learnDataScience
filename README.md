@@ -1,4 +1,4 @@
-# mySKlearn
+# learnSKlearn
 #### 自己实现的sklearn库底层代码，持续更新中
 
 - preprocessing
@@ -8,36 +8,33 @@
   - LabelEncoder_
   - OrdinalEncoder_
   - PolynomialFeatures_
-
 - naive_bayes
   - MultinomialNB_
   - GaussianNB_
-
 - linear_model
   - LinearRegression_
   - Ridge_
   - Lasso_
   - LogisticRegression_
-  
 - neighbors
   - KNeighborsClassifier_
   - KNeighborsRegressor_
-  
 - tree
   - DecisionTreeClassifier_
   - DecisionTreeRegressor_
-  
 - cluster
   - KMeans_
-  
 - decomposition
   - PCA_
-  
+- ensemble
+  - RandomForestClassifier_
+  - RandomForestRegressor_
+  - AdaBoostClassifier_
+  - GBDTRegressor_
 - model_selection
   - train_test_split_
   - cross_val_score_
   - GirdSearchCV_
-  
 - metrics
   - accuracy_score_
   - f1_score_
